@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="en">
+     <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="shortcut icon" type="image/png" href="LOGO FROM EDIT PROFILE"><!--LOGO FROM EDIT PROFILE-->
+          <title>Search & Book Outdoor Advertising Company</title>
+          <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+     </head>
+
+<body>
+
+     <div class="tab">
+          <button class="active" id="clienttabspadding" onclick="openCity(event, 'Search')" id="defaultOpen" title="Search & Book" style="background: #7475ff; ">Search</button><!--ONCLICK WAS CHANGED-->
+		<button id="clienttabspadding" onclick="openCity(event, 'Booked')" title="Sign & Pay">Booked</button><!--ONCLICK WAS CHANGED-->
+
+          <button id="toprightpurplebtn" onclick="document.getElementById('id02').style.display='block'" title="Have an account?  Log in">Log In</button>
+          <button id="newsignbtn" onclick="document.getElementById('id01').style.display='block'" title="New?  Sign up for free">Sign Up</button>
+
+          <button id="toprightpurplebtn" onclick="openCity(event, 'Account')" style="background: #7475ff; display: none; ">My Account</button><!--REMEMBER THIS - CHANGE IT?-->
+	</div>
+
+
+     <br><br><br><!--REMOVE REMOVE REMOVE-->
+
+
+
+
+<!--SIGN UP MODAL-->
+<!--<button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+     <button onclick="document.getElementById('id02').style.display='block'">Log In</button>-->
+     <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close">BACK &times;</span>
+          <form class="modal-content" action="/action_page.php">
+               <div class="container">
+                    <h1>Create Your Profile</h1>
+
+                    <h2>NAME</h2>
+                    <input class="standard" type="text" placeholder="Name" name="name" pattern=".{1,60}" required title="Please provide either your name or your organization's name">
+
+                    <h2>EMAIL</h2>
+                    <p id="SmallP">You'll use this email to log into your account.  We'll use this email to send you updates on pending bookings and to contact you if necessary</p>
+                    <input class="standard" type="text" placeholder="name@company.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z].{0,100}$" required title="Please enter a valid email address">
+
+                    <h2>PASSWORD</h2>
+                    <p id="SmallP">Include <u>at least</u> one uppercase letter, one lowercase letter, & one number</p>
+                    <input class="standard" type="password" placeholder="••••••••" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{2,100}" required title="Please include at least one UPPERCASE, one lowercase, and one number">
+
+                    <h2>INDUSTRY</h2>
+                    <select name="industry" title="Please select your industry"><!--NOT REQUIRED-->
+                         <option value="none" selected disabled>Select which best describes you/your organization</option>
+                         <option value="advertising">Advertising/Marketing</option>
+                         <option value="agriculture">Agriculture</option>
+                         <option value="construction">Construction</option>
+                         <option value="education">Education</option>
+                         <option value="energy">Energy</option>
+                         <option value="entertainment">Entertainment/Arts</option>
+                         <option value="finance">Financial Services</option>
+                         <option value="food">Food/Beverage</option>
+                         <option value="gambling">Gambling/Casino</option>
+                         <option value="gov">Government/Law Enforcement</option>
+                         <option value="healthcare">Healthcare</option>
+                         <option value="legal">Legal</option>
+                         <option value="manufacturing">Manufacturing/Engineering</option>
+                         <option value="media">Media</option>
+                         <option value="nonprofit">Nonprofit/Philanthropy</option>
+                         <option value="pharma">Pharma</option>
+                         <option value="political">Political Ads/Campaign</option>
+                         <option value="realestate">Real Estate</option>
+                         <option value="religious">Religious Organization</option>
+                         <option value="retail">Retail/Wholesale</option>
+                         <option value="sports">Sports</option>
+                         <option value="tech">Tech</option>
+                         <option value="telecommunications">Telecommunications</option>
+                         <option value="transportation">Transportation</option>
+                         <option value="travel">Travel/Tourism</option>
+                    </select>
+
+                    <h2>AGREEMENT</h2>
+                    <p id="SmallP">By signing up, you agree to our <a href="PrivacyPolicy.pdf" class="SignLink" target="_blank"  title="Understand how your data is being used">Privacy Policy</a></p>
+
+                    <div class="clearfix"><button type="submit" class="signupbtn">AGREE & SIGN UP</button></div>
+
+                    <p id="SmallerP" style="text-align: center">
+                         <a href="mailto:e@mail.com?subject=Feedback%3A%20Outdoor%20Company" class="SignLink" title="Tell us how we can improve your experience">Send Feedback</a> •
+                         <a href="mailto:e@mail.com?subject=Customer Support%3A%20Outdoor%20Company" class="SignLink" title="We'll get a solution back to you as soon as possible">Customer Support</a> • © 1999-2018 Outdoor Advertising Company
+                    </p>
+               </div>
+          </form>
+     </div>
+
+<!--SIGN IN MODAL-->
+     <div id="id02" class="modal">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close">BACK &times;</span>
+          <form class="modal-content" action="/action_page.php">
+               <div class="container">
+                    <h1>Welcome Back</h1>
+
+                    <h2>EMAIL</h2>
+                    <input class="standard" type="text" placeholder="name@company.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z].{0,}$" required title="Please enter a valid email address">
+
+                    <h2>PASSWORD</h2>
+                    <input class="standard" type="password" placeholder="••••••••" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{2,}" required title="Password">
+
+                    <div class="clearfix"><button type="submit" class="signinbtn">LOG IN</button></div>
+
+                    <p id="SmallerP" style="text-align: center">
+                         <a href="mailto:e@mail.com?subject=Feedback%3A%20Outdoor%20Company" class="SignLink" title="Tell us how we can improve your experience">Send Feedback</a> •
+                         <a href="mailto:e@mail.com?subject=Customer Support%3A%20Outdoor%20Company" class="SignLink" title="We'll get a solution back to you as soon as possible">Customer Support</a> •
+                         <a href="PrivacyPolicy.pdf" class="SignLink" target="_blank" title="Understand how your data is being used">Privacy Policy</a> • © 1999-2018 Outdoor Advertising Company
+                    </p>
+               </div>
+          </form>
+     </div>
+
+     <script> // GET THE MODEL
+          var modal = document.getElementById('id01'); // Sign Up Modal
+          var modal = document.getElementById('id02'); // Sign In (Log In) Modal
+     </script>
+
+     <!--<script>// When the user clicks anywhere outside of the modal, CLOSE THE MODAL
+     window.onclick = function(event) {
+          if (event.target == modal) {
+               modal.style.display = "none";
+          }
+     }
+     </script>-->
+
+     <script>
+		document.getElementById("defaultOpen").click();
+
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+
+     <footer>
+          <a href="mailto:e@mail.com?subject=Feedback%3A%20Outdoor%20Company" class="FooterLink" title="Tell us how we can improve your experience">Send Feedback</a> •
+          <a href="mailto:e@mail.com?subject=Customer Support%3A%20Outdoor%20Company" class="FooterLink" title="We'll get a solution back to you as soon as possible">Customer Support</a> •
+          <a href="PrivacyPolicy.pdf" class="FooterLink" target="_blank" title="Understand how your data is being used">Privacy Policy</a> • © 1999-2018 Outdoor Advertising Company
+     </footer>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+
+<html lang="en">
+     <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="shortcut icon" type="image/png" href="LOGO FROM EDIT PROFILE"><!--HREF SHOULD BE LOGO FROM EDIT PROFILE-->
+          <title>Edit Profile</title>
+          <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+          <!--FOR IMAGE PREVIEW--><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+     </head>
+
+    <body>
+
+          <div class="tab">
+               <button id="companytabspadding" onclick="openCity(event, 'Bookings')">AdMeOn Bookings</button>
+               <button id="companytabspadding" onclick="openCity(event, 'Displays')">Manage Displays</button>
+               <button class="active" id="companytabspadding" onclick="openCity(event, 'Profile')" style="background: #7475ff; ">Edit Profile</button>
+	     </div>
+
+
+         <section class="box">
+               <form class="box-content" action="/action_page.php">
+                    <div class="container">
+                         <h1>Edit Profile</h1>
+                         <p style="margin-top: -18px; ">It's important you keep everything up to date; this is what every visitor to your site will see.  And don't forget to <u>save all</u></p>
+
+
+                         <h2>LOGO</h2>
+                         <!--https://codepen.io/mattsince87/pen/yadZXv-->
+                         <!--UPLOAD AND PREVIEW IMAGE-->
+                         <form id="file-upload-form" class="uploader">
+                              <input id="file-upload" type="file" name="fileUpload" accept="image/*">
+
+                              <label for="file-upload" id="file-drag">
+                                   <img id="file-image" src="#" alt="" class="hidden">
+                                   <div id="start">
+                                        <i class="fa fa-download"></i>
+                                        <div>Please select an image or drag & drop an image here</div>
+                                        <div id="notimage" class="hidden">Select an image</div>
+                                        <span id="file-upload-btn" class="select-image-btn btn-primary">Choose Logo</span>
+                                   </div>
+
+                                   <div id="response" class="hidden">
+                                        <div id="messages"></div>
+                                        <progress class="progress" id="file-progress" value="0">
+                                             <span>0</span>%
+                                        </progress>
+                                   </div>
+                              </label>
+                         </form>
+                         <!--AFTER UPLOADED, RESIZE FILE TO BE SMALLER--><!--AFTER SUBMITTING FORM, IMAGE AND PREVIEW SHOULD STAY-->
+
+
+                         <h2>EMAIL</h2>
+                         <p id="SmallP">You'll use this email to log into your account.  Users will contact you via this email address</p>
+                         <input class="standard" value="EMAIL FROM SIGN UP" type="text" placeholder="name@company.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z].{0,100}$" required title="Email"><!--REMOVE VALUE-->
+
+                         <h2>COMPANY</h2>
+                         <input class="standard" value="NAME FROM SIGN UP" type="text" placeholder="Name" name="name" pattern=".{1,100}" required title="Company Name"><!--REMOVE VALUE-->
+
+                         <h2>SLOGAN</h2>
+                         <input class="standard" type="text" placeholder="America Drives Outdoor" name="slogan" pattern=".{0,200}" title="Company Slogan">
+
+                         <h2>DESCRIPTION</h2>
+                         <p id="SmallP">Here's where you tell your story and describe what makes you different.  Tell your customers why they should buy your ad space.  If you design ads yourself or offer other services, tell visitors to email you for more information.  Keep it simple - visitors can always contact you if they'd like more information</p>
+                         <textarea placeholder="Our story began when..." name="story" title="Company Description" maxlength="1000"></textarea>
+
+                         <h2>PHONE</h2>
+                         <input class="standard" type="text" placeholder="765-432-1234" pattern=".{0,14}" name="phone" title="Phone">
+
+                         <h2>ADDRESS</h2>
+                         <input class="standard" type="text" placeholder="1600 Pennsylvania Avenue, Washington, DC 20500" pattern=".{0,200}" name="address" title="Address">
+
+
+                         <h2>LINKS</h2>
+                         <p id="SmallP">Like your main social media account, blog, & billboard ad design tips</p>
+                         <input class="standard" type="text" placeholder="Facebook" name="display1" pattern=".{0,20}" title="No more than 20 characters" style="width: 24%; margin-right: 1%; float: left; "><input class="standard" type="text" placeholder="https://www.facebook.com/" name="link1" title="Link" style="width: 75%; float: right; ">
+
+                         <input class="standard" type="text" placeholder="Blog" name="display2" pattern=".{0,20}" title="No more than 20 characters" style="width: 24%; margin-right: 1%; "><input class="standard" type="text" placeholder="https://www.medium.com/" name="link2" title="Link" style="width: 75%; ">
+
+                         <input class="standard" type="text" placeholder="Design Tips" name="display3" pattern=".{0,20}" title="No more than 20 characters" style="width: 24%; margin-right: 1%; "><input class="standard" type="text" placeholder="https://www.99designs.com/blog/tips/billboard-design-tips/" name="link3" title="Link" style="width: 75%; ">
+
+
+                         <div class="clearfix"><button type="submit" class="signinbtn">SAVE ALL & UPDATE</button></div>
+
+                    </div>
+               </form>
+         </section>
+
+
+          <footer>
+               <a href="mailto:e@mail.com?subject=Feedback%3A%20Outdoor%20Company" class="FooterLink" title="Tell us how we can improve your experience">Send Feedback</a> •
+               <a href="mailto:e@mail.com?subject=Customer Support%3A%20Outdoor%20Company" class="FooterLink" title="We'll get a solution back to you as soon as possible">Customer Support</a> •
+               <a href="PrivacyPolicy.pdf" class="FooterLink" target="_blank" title="Understand how your data is being used">Privacy Policy</a> • © 1999-2018 Outdoor Advertising Company
+          </footer>
+
+         <script>
+		     document.getElementById("defaultOpen").click();
+
+		     function openCity(evt, cityName) {
+			     var i, tabcontent, tablinks;
+			     tabcontent = document.getElementsByClassName("tabcontent");
+			     for (i = 0; i < tabcontent.length; i++) {
+				     tabcontent[i].style.display = "none";
+			     }
+			     tablinks = document.getElementsByClassName("tablinks");
+			     for (i = 0; i < tablinks.length; i++) {
+				     tablinks[i].className = tablinks[i].className.replace(" active", "");
+			     }
+			     document.getElementById(cityName).style.display = "block";
+			     evt.currentTarget.className += " active";
+		     }
+	     </script>
+
+
+<!--FOR IMAGE UPLOAD AND PREVIEW--><!--https://codepen.io/mattsince87/pen/yadZXv-->
+         <script>
+          // File Upload
+          function ekUpload(){
+            function Init() {
+
+              console.log("Upload Initialised");
+
+              var fileSelect    = document.getElementById('file-upload'),
+                  fileDrag      = document.getElementById('file-drag'),
+                  submitButton  = document.getElementById('submit-button');
+
+              fileSelect.addEventListener('change', fileSelectHandler, false);
+
+              // Is XHR2 available?
+              var xhr = new XMLHttpRequest();
+              if (xhr.upload) {
+                // File Drop
+                fileDrag.addEventListener('dragover', fileDragHover, false);
+                fileDrag.addEventListener('dragleave', fileDragHover, false);
+                fileDrag.addEventListener('drop', fileSelectHandler, false);
+              }
+            }
+
+            function fileDragHover(e) {
+              var fileDrag = document.getElementById('file-drag');
+
+              e.stopPropagation();
+              e.preventDefault();
+
+              fileDrag.className = (e.type === 'dragover' ? 'hover' : 'modal-body file-upload');
+            }
+
+            function fileSelectHandler(e) {
+              // Fetch FileList object
+              var files = e.target.files || e.dataTransfer.files;
+
+              // Cancel event and hover styling
+              fileDragHover(e);
+
+              // Process all File objects
+              for (var i = 0, f; f = files[i]; i++) {
+                parseFile(f);
+                uploadFile(f);
+              }
+            }
+
+            // Output
+            function output(msg) {
+              // Response
+              var m = document.getElementById('messages');
+              m.innerHTML = msg;
+            }
+
+            function parseFile(file) {
+
+              console.log(file.name);
+              output(
+                '<strong>' + encodeURI(file.name) + '</strong>'
+              );
+
+              // var fileType = file.type;
+              // console.log(fileType);
+              var imageName = file.name;
+
+              var isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(imageName);
+              if (isGood) {
+                document.getElementById('start').classList.add("hidden");
+                document.getElementById('response').classList.remove("hidden");
+                document.getElementById('notimage').classList.add("hidden");
+                // Thumbnail Preview
+                document.getElementById('file-image').classList.remove("hidden");
+                document.getElementById('file-image').src = URL.createObjectURL(file);
+              }
+              else {
+                document.getElementById('file-image').classList.add("hidden");
+                document.getElementById('notimage').classList.remove("hidden");
+                document.getElementById('start').classList.remove("hidden");
+                document.getElementById('response').classList.add("hidden");
+                document.getElementById("file-upload-form").reset();
+              }
+            }
+
+            function setProgressMaxValue(e) {
+              var pBar = document.getElementById('file-progress');
+
+              if (e.lengthComputable) {
+                pBar.max = e.total;
+              }
+            }
+
+            function updateFileProgress(e) {
+              var pBar = document.getElementById('file-progress');
+
+              if (e.lengthComputable) {
+                pBar.value = e.loaded;
+              }
+            }
+
+            function uploadFile(file) {
+
+              var xhr = new XMLHttpRequest(),
+                fileInput = document.getElementById('class-roster-file'),
+                pBar = document.getElementById('file-progress'),
+                fileSizeLimit = 1024; // In MB
+              if (xhr.upload) {
+                // Check if file is less than x MB
+                if (file.size <= fileSizeLimit * 1024 * 1024) {
+                  // Progress bar
+                  pBar.style.display = 'inline';
+                  xhr.upload.addEventListener('loadstart', setProgressMaxValue, false);
+                  xhr.upload.addEventListener('progress', updateFileProgress, false);
+
+                  // File received / failed
+                  xhr.onreadystatechange = function(e) {
+                    if (xhr.readyState == 4) {
+                      // Everything is good!
+
+                      // progress.className = (xhr.status == 200 ? "success" : "failure");
+                      // document.location.reload(true);
+                    }
+                  };
+
+                  // Start upload
+                  xhr.open('POST', document.getElementById('file-upload-form').action, true);
+                  xhr.setRequestHeader('X-File-Name', file.name);
+                  xhr.setRequestHeader('X-File-Size', file.size);
+                  xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+                  xhr.send(file);
+                } else {
+                  output('Please upload a smaller file (< ' + fileSizeLimit + ' MB).');
+                }
+              }
+            }
+
+            // Check for the various File API support.
+            if (window.File && window.FileList && window.FileReader) {
+              Init();
+            } else {
+              document.getElementById('file-drag').style.display = 'none';
+            }
+          }
+          ekUpload();
+     </script>
+
+    </body>
+</html>

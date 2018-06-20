@@ -1,0 +1,100 @@
+<%
+c.execute("SELECT * FROM COMPANY")
+
+companyOne = c.fetchone()
+
+c.execute("SELECT * FROM BILLBOARDS")
+
+billboardOne = c.fetchone()
+
+%>
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Search and Book</title>
+		<link href="/static/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="/static/css/tabs.css" rel="stylesheet" type="text/css">
+		    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </head>
+    <body>
+
+
+
+		<div id="header">
+			<img alt="{{companyOne[2]}}" id="logo" style="width: 150px;" src="/static/images/LOGO.png">
+			<p class="smallMargin">{{companyOne[3]}}</p>
+			<h2>{{companyOne[1]}}</h2>
+			<p class="smallMargin">{{companyOne[4]}}</p>
+			<p class="smallMargin">{{companyOne[4]}}</p>
+			<p class="smallMargin">{{companyOne[7]}}</p>
+			<p class="smallMargin"><a>{{companyOne[5]}}</a> • <a>{{companyOne[6]}}</a> • <a>{{companyOne[8]}}</a> • <a>{{companyOne[9]}}</a> • <a>{{companyOne[10]}}</a></p>
+		</div>
+
+		<div class="tab">
+			<button class="tablinks active" onclick="openCity(event, 'Search&Book')" id="defaultOpen" style="color: #fff;">Search & Book</button>
+			<button class="tablinks" onclick="openCity(event, 'Sign&Pay')" style="color: #fff;">Sign & Pay</button>
+			<form method="get" action="/login">
+			<button id="signInButtom" type="submit" style="float: right; color: #fff;">Login</button>
+			</form>
+			<form method="get" action="/newUser">
+			<button id="newButton" onclick="window.location.href=/newUser" style="float: right; color: #fff;">I'm New</button>
+            </form>
+		</div>
+
+		<div id="Search&Book" class="tabcontent" style="height: 42%; display: block;">
+
+			<div class="billboard" class="w3-container">
+				<img alt="{{billboardOne[6]}}" src="/static/images/{{billboardOne[6]}}.jpg" style="height: 200px; float: left;">
+				<div class="billboardDetails w3-container w3-third">
+					<h4 class="w3-large" class="w3-padding-small">Billboard Info</h4>
+					<p class="w3-medium">
+						Size: {{billboardOne[4]}}<br>
+						Imps/4W:<br>
+						CPM:{{billboardOne[5]}}
+					</p>
+					<p class="smallMargin">
+						4 week rate: ${{billboardOne[2]}}  • Installation cost ${{billboardOne[3]}}<br>
+						Booked: {{billboardOne[9]}}
+					</p>
+				</div>
+				<div class="w3-container w3-half">
+        			<button id="newButton" class="w3-button" onclick="" style="color: #fff;">Book</button>
+
+				</div>
+
+		    </div>
+        </div>
+		<div id="Sign&Pay" class="tabcontent" style="display: none;">
+		    <br><br>
+			<h3>You must first book a billboard before you can Sign & Pay</h3>
+
+		</div>
+
+
+		<br>
+		<footer style="margin-top: 50px;"><p><a>SendFeedback</a> / <a>Terms of Service</a> / <a>Privacy Policy</a> / © 2018 AdMeOn, LLC </p></footer>
+
+		<script>
+		document.getElementById("defaultOpen").click();
+
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		</script>
+
+</body>
+</html>

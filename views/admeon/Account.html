@@ -1,0 +1,279 @@
+<!doctype html>
+
+<html lang="en">
+     <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="shortcut icon" type="image/png" href="LOGO FROM EDIT PROFILE"><!--LOGO FROM EDIT PROFILE-->
+          <title>My Account</title>
+          <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+          <!--FOR IMAGE PREVIEW--><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+     </head>
+
+    <body>
+
+          <div class="tab">
+               <button id="clienttabspadding" onclick="openCity(event, 'Search')" id="defaultOpen" title="Search & Book">Search</button><!--ONCLICK WAS CHANGED-->
+		     <button id="clienttabspadding" onclick="openCity(event, 'Booked')" title="Sign & Pay">Booked</button><!--ONCLICK WAS CHANGED-->
+
+               <button class="active" id="toprightpurplebtn" onclick="openCity(event, 'Account')" style="background: #7475ff; ">My Account</button>
+	     </div>
+
+
+         <section class="box">
+               <form class="box-content" action="/action_page.php">
+                    <div class="container">
+                         <h1>My Account</h1>
+                         <p style="margin-top: -18px; ">Help us build a stronger relationship together by letting us get to know you and your organization better.  Your information is securely handled; only our employees can view your profile, and payment processing is automated through Stripe.  And don't forget to <u>save all</u></p>
+
+
+                         <h2>PROFILE PICTURE</h2>
+                         <!--https://codepen.io/mattsince87/pen/yadZXv-->
+                         <!--UPLOAD AND PREVIEW IMAGE-->
+                         <form id="file-upload-form" class="uploader">
+                              <input id="file-upload" type="file" name="fileUpload" accept="image/*">
+
+                              <label for="file-upload" id="file-drag">
+                                   <img id="file-image" src="#" alt="" class="hidden">
+                                   <div id="start">
+                                        <i class="fa fa-download"></i>
+                                        <div>Select an image or drag & drop an image here</div>
+                                        <div id="notimage" class="hidden" style="margin-top: 2px; ">Please select an image</div>
+                                        <span id="file-upload-btn" class="select-image-btn btn-primary">Choose Profile Picture</span>
+                                   </div>
+
+                                   <div id="response" class="hidden">
+                                        <div id="messages"></div>
+                                        <progress class="progress" id="file-progress" value="0">
+                                             <span>0</span>%
+                                        </progress>
+                                   </div>
+                              </label>
+                         </form>
+                         <!--AFTER UPLOADED, RESIZE FILE TO BE SMALLER--><!--AFTER SUBMITTING FORM, IMAGE AND PREVIEW SHOULD STAY-->
+
+
+                         <h2>NAME</h2>
+                         <input class="standard" value="NAME FROM SIGN UP" type="text" placeholder="Name" name="name" pattern=".{1,100}" required title="Your name or your organization's name"><!--REMOVE VALUE-->
+
+                         <h2>EMAIL</h2>
+                         <p id="SmallP">You'll use this email to log into your account.  We'll use this email to send you updates on pending bookings and to contact you if necessary</p>
+                         <input class="standard" value="EMAIL FROM SIGN UP" type="text" placeholder="name@company.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z].{0,100}$" required title="Email">
+
+                         <h2>INDUSTRY</h2>
+                         <select name="industry" title="Industry">
+                              <option value="none" selected disabled>Select which best describes you/your organization</option>
+                              <option value="advertising">Advertising/Marketing</option>
+                              <option value="agriculture">Agriculture</option>
+                              <option value="construction">Construction</option>
+                              <option value="education">Education</option>
+                              <option value="energy">Energy</option>
+                              <option value="entertainment">Entertainment/Arts</option>
+                              <option value="finance">Financial Services</option>
+                              <option value="food">Food/Beverage</option>
+                              <option value="gambling">Gambling/Casino</option>
+                              <option value="government">Government/Law Enforcement</option>
+                              <option value="healthcare">Healthcare</option>
+                              <option value="legal">Legal</option>
+                              <option value="manufacturing">Manufacturing/Engineering</option>
+                              <option value="media">Media</option>
+                              <option value="nonprofit">Nonprofit/Philanthropy</option>
+                              <option value="pharma">Pharma</option>
+                              <option value="political">Political Ads/Campaign</option>
+                              <option value="realestate">Real Estate</option>
+                              <option value="religious">Religious Organization</option>
+                              <option value="retail">Retail/Wholesale</option>
+                              <option value="sports">Sports</option>
+                              <option value="tech">Tech</option>
+                              <option value="telecommunications">Telecommunications</option>
+                              <option value="transportation">Transportation</option>
+                              <option value="travel">Travel/Tourism</option>
+                         </select>
+
+                         <h2>LINKS</h2>
+                         <p id="SmallP"></p>
+                         <input class="standard" type="text" placeholder="Company Website" name="display1" pattern=".{0,20}" title="No more than 20 characters" style="width: 24%; margin-right: 1%; float: left; "><input class="standard" type="text" placeholder="https://www.companywebsite.com/" name="link1" title="Link" style="width: 75%; float: right; ">
+
+                         <input class="standard" type="text" placeholder="Company Twitter" name="display2" pattern=".{0,20}" title="No more than 20 characters" style="width: 24%; margin-right: 1%; "><input class="standard" type="text" placeholder="https://www.twitter.com/" name="link2" title="Link" style="width: 75%; ">
+
+                         <input class="standard" type="text" placeholder="Personal LinkedIn" name="display3" pattern=".{0,20}" title="No more than 20 characters" style="width: 24%; margin-right: 1%; "><input class="standard" type="text" placeholder="https://www.linkedin.com/" name="link3" title="Link" style="width: 75%; ">
+
+
+                         <div class="clearfix"><button type="submit" class="signinbtn">SAVE ALL & UPDATE</button></div>
+
+                    </div>
+               </form>
+         </section>
+
+
+          <footer>
+               <a href="mailto:e@mail.com?subject=Feedback%3A%20Outdoor%20Company" class="FooterLink" title="Tell us how we can improve your experience">Send Feedback</a> •
+               <a href="mailto:e@mail.com?subject=Customer Support%3A%20Outdoor%20Company" class="FooterLink" title="We'll get a solution back to you as soon as possible">Customer Support</a> •
+               <a href="PrivacyPolicy.pdf" class="FooterLink" target="_blank" title="Understand how your data is being used">Privacy Policy</a> • © 1999-2018 Outdoor Advertising Company
+          </footer>
+
+         <script>
+		     document.getElementById("defaultOpen").click();
+
+		     function openCity(evt, cityName) {
+			     var i, tabcontent, tablinks;
+			     tabcontent = document.getElementsByClassName("tabcontent");
+			     for (i = 0; i < tabcontent.length; i++) {
+				     tabcontent[i].style.display = "none";
+			     }
+			     tablinks = document.getElementsByClassName("tablinks");
+			     for (i = 0; i < tablinks.length; i++) {
+				     tablinks[i].className = tablinks[i].className.replace(" active", "");
+			     }
+			     document.getElementById(cityName).style.display = "block";
+			     evt.currentTarget.className += " active";
+		     }
+	     </script>
+
+
+<!--FOR IMAGE UPLOAD AND PREVIEW--><!--https://codepen.io/mattsince87/pen/yadZXv-->
+         <script>
+          // File Upload
+          function ekUpload(){
+            function Init() {
+
+              console.log("Upload Initialised");
+
+              var fileSelect    = document.getElementById('file-upload'),
+                  fileDrag      = document.getElementById('file-drag'),
+                  submitButton  = document.getElementById('submit-button');
+
+              fileSelect.addEventListener('change', fileSelectHandler, false);
+
+              // Is XHR2 available?
+              var xhr = new XMLHttpRequest();
+              if (xhr.upload) {
+                // File Drop
+                fileDrag.addEventListener('dragover', fileDragHover, false);
+                fileDrag.addEventListener('dragleave', fileDragHover, false);
+                fileDrag.addEventListener('drop', fileSelectHandler, false);
+              }
+            }
+
+            function fileDragHover(e) {
+              var fileDrag = document.getElementById('file-drag');
+
+              e.stopPropagation();
+              e.preventDefault();
+
+              fileDrag.className = (e.type === 'dragover' ? 'hover' : 'modal-body file-upload');
+            }
+
+            function fileSelectHandler(e) {
+              // Fetch FileList object
+              var files = e.target.files || e.dataTransfer.files;
+
+              // Cancel event and hover styling
+              fileDragHover(e);
+
+              // Process all File objects
+              for (var i = 0, f; f = files[i]; i++) {
+                parseFile(f);
+                uploadFile(f);
+              }
+            }
+
+            // Output
+            function output(msg) {
+              // Response
+              var m = document.getElementById('messages');
+              m.innerHTML = msg;
+            }
+
+            function parseFile(file) {
+
+              console.log(file.name);
+              output(
+                '<strong>' + encodeURI(file.name) + '</strong>'
+              );
+
+              // var fileType = file.type;
+              // console.log(fileType);
+              var imageName = file.name;
+
+              var isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(imageName);
+              if (isGood) {
+                document.getElementById('start').classList.add("hidden");
+                document.getElementById('response').classList.remove("hidden");
+                document.getElementById('notimage').classList.add("hidden");
+                // Thumbnail Preview
+                document.getElementById('file-image').classList.remove("hidden");
+                document.getElementById('file-image').src = URL.createObjectURL(file);
+              }
+              else {
+                document.getElementById('file-image').classList.add("hidden");
+                document.getElementById('notimage').classList.remove("hidden");
+                document.getElementById('start').classList.remove("hidden");
+                document.getElementById('response').classList.add("hidden");
+                document.getElementById("file-upload-form").reset();
+              }
+            }
+
+            function setProgressMaxValue(e) {
+              var pBar = document.getElementById('file-progress');
+
+              if (e.lengthComputable) {
+                pBar.max = e.total;
+              }
+            }
+
+            function updateFileProgress(e) {
+              var pBar = document.getElementById('file-progress');
+
+              if (e.lengthComputable) {
+                pBar.value = e.loaded;
+              }
+            }
+
+            function uploadFile(file) {
+
+              var xhr = new XMLHttpRequest(),
+                fileInput = document.getElementById('class-roster-file'),
+                pBar = document.getElementById('file-progress'),
+                fileSizeLimit = 1024; // In MB
+              if (xhr.upload) {
+                // Check if file is less than x MB
+                if (file.size <= fileSizeLimit * 1024 * 1024) {
+                  // Progress bar
+                  pBar.style.display = 'inline';
+                  xhr.upload.addEventListener('loadstart', setProgressMaxValue, false);
+                  xhr.upload.addEventListener('progress', updateFileProgress, false);
+
+                  // File received / failed
+                  xhr.onreadystatechange = function(e) {
+                    if (xhr.readyState == 4) {
+                      // Everything is good!
+
+                      // progress.className = (xhr.status == 200 ? "success" : "failure");
+                      // document.location.reload(true);
+                    }
+                  };
+
+                  // Start upload
+                  xhr.open('POST', document.getElementById('file-upload-form').action, true);
+                  xhr.setRequestHeader('X-File-Name', file.name);
+                  xhr.setRequestHeader('X-File-Size', file.size);
+                  xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+                  xhr.send(file);
+                } else {
+                  output('Please upload a smaller file (< ' + fileSizeLimit + ' MB).');
+                }
+              }
+            }
+
+            // Check for the various File API support.
+            if (window.File && window.FileList && window.FileReader) {
+              Init();
+            } else {
+              document.getElementById('file-drag').style.display = 'none';
+            }
+          }
+          ekUpload();
+     </script>
+
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+     <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="shortcut icon" type="image/png" href="LOGO FROM EDIT PROFILE"><!--LOGO FROM EDIT PROFILE-->
+          <title>AdMeOn Bookings</title>
+          <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+     </head>
+
+<body>
+
+     <div class="tab">
+          <button class="active" id="companytabspadding" onclick="openCity(event, 'Bookings')" style="background: #7475ff; ">AdMeOn Bookings</button>
+          <button id="companytabspadding" onclick="openCity(event, 'Displays')">Manage Displays</button>
+          <button id="companytabspadding" onclick="openCity(event, 'Profile')">Edit Profile</button>
+     </div>
+
+
+     <br><br><!--OBVIOUSLY STYLE AND REMOVE THESE LINE BREAKERS-->
+     <button onclick="document.getElementById('id01').style.display='block'" style="height: 100px; width: 100px; "></button>
+     <br><br>
+
+
+
+
+<!--CUSTOMER PROFILE MODAL-->
+     <div id="id01" class="profilebox">
+          <form class="profilebox-content" action="/action_page.php">
+               <div class="profilebox-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="profilebox-close">&times; BACK</span>
+
+                    <div class="profilepicturecontainer">
+                         <img src="RemoveThis.jpeg" alt="Profile Picture" id="bookinguserpp"><!--VALUE FROM PROFILE PICTURE IN USER'S MY ACCOUNT-->
+                    </div>
+
+                    <h1 style="margin-top: 0px; ">Customer's Name<!--VALUE FROM NAME--></h1>
+
+                    <p style="font-weight: bold; text-transform: uppercase; margin-top: -10px; ">industry<!--VALUE FROM INDUSTRY--></p>
+
+                    <p>
+                    Email <a href="mailto:e@mail.com" class="SignLink" style="margin-right: 2%; ">e@mail.com<!--DISPLAY ACTUAL EMAIL: VALUE FROM EMAIL IN BOTH A HREF=MAILTP:VALUE AND THE DISPLAYED TEXT--></a>
+                    </p>
+
+                    <p>
+                    Go to <a href="VALUE FROM LINK1 IN USER'S MY ACCOUNT" class="SignLink" target="_blank" style="margin-right: 1.5%; ">Company Website<!--ONLY APPEAR IF DISPLAY1 AND LINK1 ARE FILLED--><!--VALUE FROM DISPLAY1 IN USER'S MY ACCOUNT--></a><a href="VALUE FROM LINK2 IN USER'S MY ACCOUNT" class="SignLink" target="_blank" style="margin-right: 1.5%; ">Company Twitter<!--ONLY APPEAR IF DISPLAY2 AND LINK2 ARE FILLED--><!--VALUE FROM DISPLAY2 IN USER'S MY ACCOUNT--></a><a href="VALUE FROM LINK3 IN USER'S MY ACCOUNT" class="SignLink" target="_blank">Personal LinkedIn<!--ONLY APPEAR IF DISPLAY3 AND LINK3 ARE FILLED--><!--VALUE FROM DISPLAY3 IN USER'S MY ACCOUNT--></a>
+                    </p>
+
+                    <p id="SmallerP"></p>
+               </div>
+          </form>
+     </div>
+
+
+
+
+<!--CUSTOMER PROFILE MODAL-->
+     <script> // GET THE MODEL
+          var modal = document.getElementById('id01'); // Customer Profile Modal
+     </script>
+
+     <script>// When the user clicks anywhere outside of the modal, CLOSE THE MODAL
+     window.onclick = function(event) {
+          if (event.target == modal) {
+               modal.style.display = "none";
+          }
+     }
+     </script>
+
+
+
+
+     <script>
+		document.getElementById("defaultOpen").click();
+
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+
+
+
+
+     <footer>
+          <a href="mailto:e@mail.com?subject=Feedback%3A%20Outdoor%20Company" class="FooterLink" title="Tell us how we can improve your experience">Send Feedback</a> •
+          <a href="mailto:e@mail.com?subject=Customer Support%3A%20Outdoor%20Company" class="FooterLink" title="We'll get a solution back to you as soon as possible">Customer Support</a> •
+          <a href="PrivacyPolicy.pdf" class="FooterLink" target="_blank" title="Understand how your data is being used">Privacy Policy</a> • © 1999-2018 Outdoor Advertising Company
+     </footer>
+
+</body>
+</html>

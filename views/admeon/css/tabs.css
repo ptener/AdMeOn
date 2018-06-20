@@ -1,0 +1,58 @@
+/* CSS Document */
+
+body {font-family: Arial;}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+	border-bottom: 2px solid #5859e0;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: #5859e0;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+button#newButton{
+	background-color: #0fdf8c;
+	width: 10%;
+}
+
+button#signInButtom{
+	background-color: #5859e0;
+	width: 10%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #d2d2f5;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #7475ff;
+}
+
+/* Style the tab content */
+.tabcontent {
+    overflow: auto;
+    display: none;
+    padding: 1% 2%;
+    border: 1px solid #5859e0;
+    border-top: none;
+	height: 25%;
+}

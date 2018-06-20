@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login Page</title>
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	    <link href="/static/css/tabs.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="">
+	<br><br><h1>New User</h1><br>
+    <!-- display the registration form -->
+    <div class="w3-container w3-third w3-center">
+
+        <div class="tab">
+			<button class="tablinks active" onclick="openCity(event, 'client')" id="defaultOpen" style="color: #fff;">Client</button>
+			<button class="tablinks" onclick="openCity(event, 'Sign&Pay')" style="color: #fff;">Buisness</button>
+		</div>
+
+            <div id="client" class="tabcontent">
+                <form  action="/searchAndBook" method="post">
+                    <table  class="w3-table-all">
+                        <tr style="background-color: #0fdf8c; color: #fff">
+                          <td colspan="2" align="left">New User</td>
+                        </tr>
+                        <tr>
+                            <td>First Name: </td>
+                            <td><input style="width: 80%" name="firstname" type="text" ></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name: </td>
+                            <td><input style="width: 80%" name="lastname" type="text" ></td>
+                        </tr>
+                        <tr>
+                            <td>User Name: </td>
+                            <td><input style="width: 80%" name="username" type="text" ></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input style="width: 80%" name="password" type="password" ></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+				<div class="w3-container w3-content w3-center"><br>
+					<input type="submit" value="Register" onclick="/searchAndBook" style="background-color: #0fdf8c; color: #fff" class="w3-button w3-margin-bottom"/>
+                	<input type="submit" value="Cancel" onclick="/searchAndBook" style="background-color: #0fdf8c; color: #fff" class="w3-button w3-margin-bottom"/>
+				</div>
+			</form>
+		</div>
+	</div>
+
+<script>
+		document.getElementById("defaultOpen").click();
+
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		</script>
+
+
+</body>
+</html>

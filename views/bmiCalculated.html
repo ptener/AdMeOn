@@ -1,0 +1,46 @@
+<%
+from bottle import request
+
+#Retrieve and sanatize data from the post form
+footHeight = float(request.forms.get("footHeight"))
+inchHeight = float(request.forms.get("inchHeight"))
+weight = int(request.forms.get("weight"))
+
+#Calculate the final height based on feet and inches
+totalHeight = (footHeight*12) + inchHeight
+
+#Calculate the BMI based on the data collected above
+bmi = (weight/(totalHeight**2))*703
+
+#Create an empty var for status to change later
+status = ""
+
+#Change status based on the value of BMI
+if(bmi < 18.5):
+    status = "underweight"
+elif(bmi > 18.5 and bmi < 24.9):
+    status = "normal"
+elif(bmi > 25 and bmi < 29.9):
+    status = "overweight"
+else:
+    status = "obese"
+#End loop
+end
+%>
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Body Mass Index Calculator</title>
+
+</head>
+
+<body>
+    <h1>Body Mass Index</h1>
+    <h3>BMI: {{bmi}}</h3>
+    <p>status: {{status}}</p>
+</body>
+</html>

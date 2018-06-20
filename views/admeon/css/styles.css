@@ -1,0 +1,217 @@
+/* CSS Document */
+
+img#logo{
+	float: left;
+	width: 20%;
+	padding: 1%;
+	padding-bottom: 2%;
+	margin-top: 1%;
+	width: 100px
+}
+
+.smallMargin{
+	margin: 5px;
+	padding: 0px;
+}
+
+#header{
+	float: left;
+	width:  100%;
+}
+
+.billboard{
+	float: left;
+	width:  100%;
+}
+.billboardDetails{
+	float: left;
+	width:  50%;
+}
+
+
+.tablinks{
+	width: 25%
+
+}
+
+
+
+
+* {box-sizing: border-box;
+     -webkit-transition: all .25s;
+	-moz-transition: all .25s;
+	-ms-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s; }
+/* *ASTERICK MEANS EVERYTHING*/
+
+::-webkit-scrollbar {width: 12px; }
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px #FFF; }
+::-webkit-scrollbar-thumb {background: #5859e0; outline: 0px solid #000; }
+
+body {margin: 0; background: #FFF; font-family: Arial, sans-serif; cursor: default; }
+
+h1 {font-family: Arial, sans-serif; color: #5859e0; font-size: 28px; font-weight: bold; }
+h2 {margin: 0px 0px 4px 0px; font-family: Arial, sans-serif; color: #5859e0; font-size: 16px; font-weight: bold; text-transform: uppercase; }
+p {font-size: 18px; }
+p#SmallP {margin-top: 0px; margin-bottom: 8px; font-size: 16px; line-height: 120%; }
+p#SmallerP {margin-top: 0px; margin-bottom: 0px; font-size: 12px; }
+
+
+
+
+/*Footer and Footer Links*/
+footer {margin: 0px auto; padding: 1%; background: #f7f7fc; text-align: center; font-size: 14px; border-top: 2px solid #7475ff; box-shadow: 0 50vh 0 50vh #f7f7fc;}
+a.FooterLink, a.FooterLink:focus, a.FooterLink:visited {text-decoration: none; color: #000; }
+a.FooterLink:hover {text-decoration: none; color: #5859e0; }
+
+
+
+
+/*Tab*/
+.tab {overflow: hidden; background: transparent; border-bottom: 4px solid #7475ff; }
+
+/*Tab Buttons*/
+#clienttabspadding {padding: 16px 5% 12px 5%; }
+#companytabspadding {padding: 16px 1% 12px 1%; }
+.tab button {background: #5859e0; color: #FFF; float: left; border: none; border-radius: 0px; outline: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; }
+
+/*Background Color on Hover*/
+.tab button:hover, .tab button:focus {background: #7475ff; }
+
+/*Sign Up/In Buttons*/
+button#toprightpurplebtn, button#newsignbtn {float: right; padding: 16px 3% 12px 3%; }
+button#toprightpurplebtn {background: #5859e0; }
+button#toprightpurplebtn:hover, button#toprightpurplebtn:focus {background: #7475ff; }
+button#newsignbtn {background: #0fdf8c; }
+button#newsignbtn:hover, button#newsignbtn:focus {background: #13ef97; }
+
+/*Create an Active/Current Tablink Class*/
+.active {background: #7475ff; }
+
+
+
+
+/*Input Fields*/
+input.standard {width: 100%; margin: 2px 0px 10px 0px; padding: 12px 8px 10px 8px; background: #FFF; color: #000; display: inline-block; font-size: 16px; border: 1.5px solid #5859e0; border-radius: 4px; outline: none; }
+input.standard:focus, select:focus {background: #f7f7fc; padding: 12px 8px 10px 12px; border: 1.5px solid #7475ff; color: #000; }
+
+/*Dropdown Select Menu*/
+select {width: 100%; margin: 2px 0px 10px 0px; padding: 12px 8px 10px 8px; background: #FFF; display: inline-block; font-size: 16px; border: 1.5px solid #5859e0; border-radius: 4px; outline: none; cursor: pointer; }
+select option {background: #FFF; outline: 0; border: 0px;}
+
+a.SignLink, a.SignLink:focus, a.SignLink:visited {text-decoration: none; color: #5859e0; }
+a.SignLink:hover {text-decoration: underline; }
+
+/*Sign Up/In Buttons*/
+.signupbtn, .signinbtn {float: left; width: 100%; margin: 8px 0px; padding: 12px 8px 10px 8px; font-family: Arial, sans-serif; color: #FFF; font-size: 18px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; outline: 0; }
+.signupbtn:focus, .signinbtn:focus {border: 2px solid #FFF; }
+.signupbtn {background: #0fdf8c; }
+.signinbtn {background: #7475ff; }
+
+.clearfix::after {content: ""; clear: both; display: table; }
+
+/*Padding Around/Within the Container*/
+.container {padding: 20px 24px 12px 24px; }
+
+/*Modal Background*/
+.modal {
+     display: none; /*Hidden by default*/
+     position: fixed; /*Stay in place*/
+     z-index: 1; /*Sit on top*/
+     left: 0; top: 0; width: 100%; height: 100%; overflow: auto; /*Enable scroll if needed*/
+     background: #f7f7fc; /*Color behind the modal*/
+}
+
+/*Modal Content*/
+.modal-content {
+     width: 50%; margin: 5% 0px 0px 20%;
+     background: linear-gradient(to bottom right, #f7f7fc, #FFF); border: none; border-radius: 4px;
+}
+
+/*Close Button (X)*/
+.close {position: absolute; right: 6%; top: 3%; color: #FF7475; font-size: 28px; text-align: right; font-weight: bold; padding: 6px 4px 5px 4px; }
+.close:hover, .close:focus {color: #FFF; cursor: pointer; background: #FF7475; border-radius: 0px; }
+
+/*FIX THIS*/
+/* Change styles for cancel button and signup button on extra small screens
+@media screen and (max-width: 400px) {
+    modal-content {margin-top: 5%; margin-bottom: 0%; margin-left: 0%; margin-right: 0%; width: 80%; }
+}*/
+
+
+
+
+/*Box Background - for Account and Edit Profile Pages*/
+.box {overflow: auto; background: linear-gradient(to bottom right, #FFF, #FFF, #f7f7fc) /*COLOR BEHIND*/; }
+
+/*Box Content*/
+.box-content {
+     width: 50%; margin: 1.5% 0px 1.5% 20%;
+     background: transparent; border: none; border-radius: 4px;
+}
+
+
+textarea {min-width: 100%; max-width: 100%; min-height: 160px; margin: 2px 0px 10px 0px; padding: 12px 8px 10px 8px; background: #FFF; color: #000; display: inline-block; font-size: 16px; border: 1.5px solid #5859e0; border-radius: 4px; outline: none; font-family: Arial, sans-serif; }
+textarea:focus {background: #f7f7fc; padding: 12px 8px 10px 12px; border: 1.5px solid #7475ff; color: #000; }
+
+/*Padding Around/Within Profile Container*/
+.profilebox-container {padding: 30px 24px 6px 24px; }
+
+
+
+
+/*IMAGE UPLOAD AND PREVIEW - LOGO AND PROFILE PICTURE*/
+.uploader {display: block; clear: both; width: 100%; background: #FFF; }
+
+label#file-drag {float: left; clear: both; width: 100%; margin: 2px 0px 10px 0px; text-align: left; background: transparent; user-select: none; cursor: pointer; }
+
+#start {float: left; clear: both; width: 100%; }
+#notimage {display: block; float: left; clear: both; width: 100%; margin-top: 2px; }
+.hidden {display: none; }
+
+i.fa {font-size: 18px; margin-bottom: 1%; }
+
+#response {float: left; clear: both; width: 100%; }
+#messages {margin-top: 10px; }
+
+progress, .progress {display: inline; clear: both; margin: 0px auto; width: 100%; height: 8px; border: 0px; border-radius: 4px; background: #7475ff; overflow: hidden; }
+.progress[value]::-webkit-progress-bar {border-radius: 4px; background: linear-gradient(to right, #7475ff, #0fdf8c); }
+.progress[value]::-webkit-progress-value {background: linear-gradient(to right, #7475ff, #0fdf8c); border-radius: 4px; }
+.progress[value]::-moz-progress-bar {background: linear-gradient(to right, #7475ff, #0fdf8c); border-radius: 4px; }
+
+#file-image {display: inline; margin: 0px; width: auto; max-width: 100%; height: auto; max-height: 200px; }
+
+input[type="file"] {display: none; } /*HIDE THE CHOOSE FILE BUTTON*/
+
+.select-image-btn {
+          display: inline-block; margin-top: 10px; clear: both; font-family: Arial, sans-serif; font-weight: bold; font-size: 14px; text-decoration: none; text-transform: uppercase;
+          border: 0px; border-radius: 4px; outline: none; padding: 12px 8px 10px 8px; color: #FFF; box-sizing: border-box; background: #7475ff;
+}
+
+
+
+
+/*Bookings - Profile Modal*/
+.profilebox {
+     display: none; /*Hidden by default*/
+     position: fixed; /*Stay in place*/
+     z-index: 1; /*Sit on top*/
+     left: 0; top: 0; width: 100%; height: 100%; overflow: auto; /*Enable scroll if needed*/
+     background: rgba(247, 247, 252, 0.9); }
+
+.profilebox::-webkit-scrollbar-thumb {background: #7475ff; }
+
+/*Close Profile Modal*/
+.profilebox-close {color: #FF7475; font-size: 18px; font-weight: bold; padding: 4px 2px 3px 2px; margin: 8px 0px 0px 0px; }
+.profilebox-close:hover, .profilebox-close:focus {color: #FFF; cursor: pointer; background: #FF7475; border-radius: 0px; }
+
+
+/*Profile Content*/
+.profilebox-content {
+     width: 60%; margin: 10% 0px 0px 20%;
+     background: linear-gradient(to right, #FFF, #FFF, #FFF, rgba(247, 247, 252, 0)); border: none; border-radius: 4px 0px 0px 4px;
+}
+
+#bookinguserpp {margin: 18px 0px 18px 0px; height: auto; max-height: 200px; width: auto; max-width: 80%; border: 0px; border-radius: 0px; outline: 0px; }
+
