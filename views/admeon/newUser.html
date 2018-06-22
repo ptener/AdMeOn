@@ -15,7 +15,7 @@
 
         <div class="tab">
 			<button class="tablinks active" onclick="openCity(event, 'client')" id="defaultOpen" style="color: #fff;">Client</button>
-			<button class="tablinks" onclick="openCity(event, 'Sign&Pay')" style="color: #fff;">Buisness</button>
+			<button class="tablinks" onclick="openCity(event, 'buisness')" style="color: #fff;">Buisness</button>
 		</div>
 
             <div id="client" class="tabcontent">
@@ -43,6 +43,33 @@
                     </table>
                 </form>
             </div>
+
+            <div id="buisness" class="tabcontent">
+                <form  action="/searchAndBook" method="post">
+                    <table  class="w3-table-all">
+                        <tr style="background-color: #0fdf8c; color: #fff">
+                          <td colspan="2" align="left">New User</td>
+                        </tr>
+                        <tr>
+                            <td>Buisness Name: </td>
+                            <td><input style="width: 80%" name="firstname" type="text" ></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input style="width: 80%" name="lastname" type="text" ></td>
+                        </tr>
+                        <tr>
+                            <td>User Name: </td>
+                            <td><input style="width: 80%" name="username" type="text" ></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input style="width: 80%" name="password" type="password" ></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
 				<div class="w3-container w3-content w3-center"><br>
 					<input type="submit" value="Register" onclick="/searchAndBook" style="background-color: #0fdf8c; color: #fff" class="w3-button w3-margin-bottom"/>
                 	<input type="submit" value="Cancel" onclick="/searchAndBook" style="background-color: #0fdf8c; color: #fff" class="w3-button w3-margin-bottom"/>
